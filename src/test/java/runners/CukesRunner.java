@@ -9,13 +9,12 @@ import org.junit.runner.RunWith;
         plugin = {
                 //"pretty",
                 "html:target/cucumber-report.html",
-                "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
         features ="src/test/resources/features" ,
-        glue = "stepdefinitions" ,
+        glue = "stepdefinitions",
         dryRun = false,
-        tags = "@Test1",
+        tags = "@Test2",
         publish= false
 )
 
