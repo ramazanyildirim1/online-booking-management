@@ -36,7 +36,9 @@ public class AmendPage extends BasePage {
     public WebElement newTotalInformation;
     @FindBy(xpath = " (//b)[6]")
     public WebElement totalFee;
-
+    //h3[@data-test="rooms_available_header"]
+    @FindBy(xpath = "//h3[@data-test='rooms_available_header']")
+    public WebElement roomsAvailable;
     public List<WebElement> getListOfDays() {
         return Driver.getDriver().findElements(By.cssSelector("[class='pika-button pika-day']"));
     }
@@ -49,7 +51,6 @@ public class AmendPage extends BasePage {
         monthDropDown.click();
         Select select =new Select(monthDropDown);
         select.selectByVisibleText(month);
-
     }
     //tr[@class="pika-row"]/td[@data-day="1" and @aria-selected="false" and not(contains(@class,'disabled'))]
     public void selectDay(String day){
@@ -64,9 +65,10 @@ public class AmendPage extends BasePage {
         selectYear(year);
         selectMonth(month);
         selectDay(day);
-
-
     }
+
+
+
 
 }
 

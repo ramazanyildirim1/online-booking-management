@@ -14,7 +14,6 @@ public class Hooks {
     public void setupScenarioForLogins(){
         Driver.getDriver().get(ConfigurationReader.get("url.premierInn"));
     }
-
     @After
     public void teardownScenario(Scenario scenario) {
 
@@ -22,11 +21,8 @@ public class Hooks {
 
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
         }
         Driver.closeDriver();
-
     }
-
 
 }

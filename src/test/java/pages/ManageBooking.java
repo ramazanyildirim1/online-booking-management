@@ -8,6 +8,7 @@ import utilities.BrowserUtils;
 import utilities.Driver;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 
 public class ManageBooking extends BasePage{
 
@@ -31,21 +32,19 @@ public class ManageBooking extends BasePage{
     public void checkDateFromCalender(String date ) throws ParseException {
 
         arrivalDateField.click();
-
         String day = String.valueOf(BrowserUtils.dateConverter(date).get("day"));
         String month = String.valueOf(BrowserUtils.dateConverter(date).get("monthShort"));
         String year = String.valueOf(BrowserUtils.dateConverter(date).get("year"));
-
 
         String convertedDate = day+month+year;
 
         WebElement calenderDate = Driver.getDriver().findElement(By.xpath("//button[@id='date-picker-day-"+convertedDate+"']"));
         try{
-            BrowserUtils.waitForClickablility(calenderDate,2);
+            BrowserUtils.waitForClickablility(calenderDate,4);
             BrowserUtils.clickWithJS(calenderDate);
         }catch (TimeoutException e){
             calendarRightArrow.click();
-            BrowserUtils.waitForClickablility(calenderDate,2);
+            BrowserUtils.waitForClickablility(calenderDate,4);
             BrowserUtils.clickWithJS(calenderDate);
         }
     }
@@ -57,5 +56,6 @@ public class ManageBooking extends BasePage{
         bookingSurnameField.click();
         bookingSurnameField.sendKeys(surname);
     }
+
 
 }
