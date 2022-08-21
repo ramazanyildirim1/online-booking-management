@@ -76,9 +76,5 @@ public class AmendStepDefinitions {
 
         String expectedRoomsAvailableHeader="Rooms available";
         Assert.assertEquals(expectedRoomsAvailableHeader,amendPage.roomsAvailable.getText());
-
-
     }
-
-
 }

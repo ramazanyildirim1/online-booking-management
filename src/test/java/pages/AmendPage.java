@@ -36,7 +36,6 @@ public class AmendPage extends BasePage {
     public WebElement newTotalInformation;
     @FindBy(xpath = " (//b)[6]")
     public WebElement totalFee;
-    //h3[@data-test="rooms_available_header"]
     @FindBy(xpath = "//h3[@data-test='rooms_available_header']")
     public WebElement roomsAvailable;
     public List<WebElement> getListOfDays() {
