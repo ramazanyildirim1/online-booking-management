@@ -10,7 +10,6 @@ import pages.BasePage;
 import pages.BookingInformationPage;
 import pages.ManageBooking;
 import utilities.BrowserUtils;
-
 import java.text.ParseException;
 import java.util.ArrayList;
 
@@ -18,7 +17,6 @@ public class AmendStepDefinitions {
     ManageBooking manageBookingPage = new ManageBooking();
     BookingInformationPage bookingInformationPage = new BookingInformationPage();
     AmendPage amendPage = new AmendPage();
-    public static ArrayList<String> storeOfCapture = new ArrayList<String>();
     @Given("customer is in the main page")
     public void customerIsInTheMainPage() {
         manageBookingPage.acceptCookies.click();
@@ -62,19 +60,12 @@ public class AmendStepDefinitions {
     }
     @And("customer should be able to review updated reservation details and store in {string} file")
     public void customerShouldBeAbleToReviewUpdatedReservationDetailsAndStoreInFile(String fileName) {
-        String fromDateInfo= amendPage.fromDateInformation.getText();
-        String nightInfo=amendPage.nightInformation.getText();
-        String toDateInfo=amendPage.toDateInformation.getText();
-        String newTotalInfo= amendPage.newTotalInformation.getText();
-        String totalFeeInfo= amendPage.totalFee.getText();
-        storeOfCapture.add(fromDateInfo);
-        storeOfCapture.add(nightInfo);
-        storeOfCapture.add(toDateInfo);
-        storeOfCapture.add(newTotalInfo);
-        storeOfCapture.add(totalFeeInfo);
-        BrowserUtils.writeToCSVFile(fileName,storeOfCapture);
+        amendPage.storeAllDataToCSV(fileName);
+       String expectedRoomsAvailableHeader="Rooms available";
+       Assert.assertEquals(expectedRoomsAvailableHeader,amendPage.roomsAvailable.getText());
+    }
+    @And("customer should not be able to  updated reservation details as recent date")
+    public void customerShouldNotBeAbleToUpdatedReservationDetailsAsRecentDate() {
 
-        String expectedRoomsAvailableHeader="Rooms available";
-        Assert.assertEquals(expectedRoomsAvailableHeader,amendPage.roomsAvailable.getText());
     }
 }

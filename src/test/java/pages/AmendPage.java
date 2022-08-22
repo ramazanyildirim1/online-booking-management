@@ -9,8 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import utilities.BrowserUtils;
 import utilities.Driver;
-
-
 import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,6 +24,7 @@ public class AmendPage extends BasePage {
     @FindBy(xpath = "//select[@class='pika-select pika-select-month']")
     public WebElement monthDropDown;
     //tr[@class="pika-row"]/td[@aria-selected="false" and not(contains(@class,'disabled'))]
+
     @FindBy(xpath = " (//b)[1]")
     public WebElement fromDateInformation;
     @FindBy(xpath = " (//b)[2]")
@@ -56,6 +55,7 @@ public class AmendPage extends BasePage {
         WebElement element=Driver.getDriver().findElement(By.xpath("//tr[@class='pika-row']/td[@data-day='"+day+"' and @aria-selected='false' and not(contains(@class,'disabled'))]"));
         element.click();
     }
+
     public void updateArrivalDate(String date) throws ParseException {
         BrowserUtils.dateConverter(date);
         String day = String.valueOf(BrowserUtils.dateConverter(date).get("day"));
@@ -65,9 +65,20 @@ public class AmendPage extends BasePage {
         selectMonth(month);
         selectDay(day);
     }
-
-
-
+    public void storeAllDataToCSV(String fileName){
+        ArrayList<String> storingAlldata= new ArrayList<>();
+        String fromDateInfo = fromDateInformation.getText();
+        String nightInfo = nightInformation.getText();
+        String toDateInfo = toDateInformation.getText();
+        String newTotalInfo = newTotalInformation.getText();
+        String totalFeeInfo = totalFee.getText();
+        storingAlldata.add(fromDateInfo);
+        storingAlldata.add(nightInfo);
+        storingAlldata.add(toDateInfo);
+        storingAlldata.add(newTotalInfo);
+        storingAlldata.add(totalFeeInfo);
+        BrowserUtils.writeToCSVFile(fileName,storingAlldata);
+    }
 
 }
 
