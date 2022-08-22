@@ -4,8 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c75a3ae-319b-4696-aee7-6530cffb0a1b" name="Changes" comment="step def is updated">
+    <list default="true" id="6c75a3ae-319b-4696-aee7-6530cffb0a1b" name="Changes" comment="amend step def and amendPage is updated">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookingLogs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AmendPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AmendPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ManageBooking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ManageBooking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/CukesRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/CukesRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/AmendStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/AmendStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/BrowserUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/BrowserUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Amend.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Amend.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/embeddings/embedding_-42123955.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/embeddings/embedding_1030835709.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/embeddings/embedding_2079204980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/embeddings/embedding_99566147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-failures.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-failures.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-features.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-steps.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-steps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-feature_3944845154.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-feature_3944845154.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-tag_2209192177.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-tag_2209192177.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-tag_4060448127.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-tag_4060448127.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Amend.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/Amend.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/AmendPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/AmendPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ManageBooking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ManageBooking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runners/CukesRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runners/CukesRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepdefinitions/AmendStepDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepdefinitions/AmendStepDefinitions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/BrowserUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/BrowserUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/ConfigurationReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/ConfigurationReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/utilities/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +60,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DSIzgrglmqPt1EQ9I2I1QHxBnj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -63,7 +99,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/Properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1 (2)">
+  <component name="RunManager" selected="JUnit.CukesRunner">
     <configuration name="Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1 (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Amend.feature:33" />
@@ -104,15 +140,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The customer should  be able to  update  reservation" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Amend.feature:32" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Amend.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="online-booking-management" />
       <option name="NAME_FILTER" value="^The customer should  be able to  update  reservation$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer should  be able to  update  reservation$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer should  be able to  update  reservation" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -124,15 +160,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: The customer should  be able to  update  reservation" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The customer should not be able to  update  reservation as a recent date" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Amend.feature" />
       <option name="GLUE" value="stepdefinitions" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="online-booking-management" />
-      <option name="NAME_FILTER" value="^The customer should  be able to  update  reservation$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer should  be able to  update  reservation$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The customer should  be able to  update  reservation" />
+      <option name="NAME_FILTER" value="^The customer should not be able to  update  reservation as a recent date$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer should not be able to  update  reservation as a recent date$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer should not be able to  update  reservation as a recent date" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -161,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1 (2)" />
         <item itemvalue="JUnit.CukesRunner" />
+        <item itemvalue="Cucumber Java.Scenario: The customer should not be able to  update  reservation as a recent date" />
         <item itemvalue="Cucumber Java.Scenario: The customer should  be able to  update  reservation" />
+        <item itemvalue="Cucumber Java.Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1 (2)" />
         <item itemvalue="Cucumber Java.Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1 (1)" />
-        <item itemvalue="Cucumber Java.Scenario: The customer should  be able to  update  reservation - @Test2 - Example n°1" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +226,7 @@
       <workItem from="1661006454223" duration="7585000" />
       <workItem from="1661020524973" duration="7180000" />
       <workItem from="1661034170586" duration="5315000" />
-      <workItem from="1661040887883" duration="18088000" />
+      <workItem from="1661040887883" duration="35882000" />
     </task>
     <task id="LOCAL-00001" summary="future file has done">
       <created>1660952880460</created>
@@ -318,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661120857380</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="amend step def and amendPage is updated">
+      <created>1661180898408</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661180898409</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +396,7 @@
     <MESSAGE value="BrowserUtils Updated" />
     <MESSAGE value="csv.file created" />
     <MESSAGE value="step def is updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="step def is updated" />
+    <MESSAGE value="amend step def and amendPage is updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="amend step def and amendPage is updated" />
   </component>
 </project>

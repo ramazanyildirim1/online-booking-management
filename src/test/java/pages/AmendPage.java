@@ -1,30 +1,22 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import utilities.BrowserUtils;
 import utilities.Driver;
-import java.text.Format;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class AmendPage extends BasePage {
     @FindBy(id = "arrivalDate")
     public WebElement amendBookingArrivalDate;
-    @FindBy(xpath = "//strong[@data-test='departure_date']")
-    public WebElement amendBookingCheckOutDate;
     @FindBy(xpath = " //select[@class='pika-select pika-select-year']")
     public WebElement yearDropDown;
     @FindBy(xpath = "//select[@class='pika-select pika-select-month']")
     public WebElement monthDropDown;
     //tr[@class="pika-row"]/td[@aria-selected="false" and not(contains(@class,'disabled'))]
-
     @FindBy(xpath = " (//b)[1]")
     public WebElement fromDateInformation;
     @FindBy(xpath = " (//b)[2]")
@@ -65,21 +57,6 @@ public class AmendPage extends BasePage {
         selectMonth(month);
         selectDay(day);
     }
-    public void storeAllDataToCSV(String fileName){
-        ArrayList<String> storingAlldata= new ArrayList<>();
-        String fromDateInfo = fromDateInformation.getText();
-        String nightInfo = nightInformation.getText();
-        String toDateInfo = toDateInformation.getText();
-        String newTotalInfo = newTotalInformation.getText();
-        String totalFeeInfo = totalFee.getText();
-        storingAlldata.add(fromDateInfo);
-        storingAlldata.add(nightInfo);
-        storingAlldata.add(toDateInfo);
-        storingAlldata.add(newTotalInfo);
-        storingAlldata.add(totalFeeInfo);
-        BrowserUtils.writeToCSVFile(fileName,storingAlldata);
-    }
-
 }
 
 

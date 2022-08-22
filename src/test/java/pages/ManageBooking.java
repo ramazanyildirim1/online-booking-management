@@ -29,6 +29,10 @@ public class ManageBooking extends BasePage{
     //button[@id="find-booking-form-button"]
     @FindBy(xpath = "//button[@id='find-booking-form-button']" )
     public WebElement searchButton;
+
+    @FindBy(xpath = "(//div[@class='wb-notification-new-text'])[4]" )
+    public WebElement incorrectDetailsInformation;
+
     public void checkDateFromCalender(String date ) throws ParseException {
 
         arrivalDateField.click();
@@ -37,14 +41,13 @@ public class ManageBooking extends BasePage{
         String year = String.valueOf(BrowserUtils.dateConverter(date).get("year"));
 
         String convertedDate = day+month+year;
-
         WebElement calenderDate = Driver.getDriver().findElement(By.xpath("//button[@id='date-picker-day-"+convertedDate+"']"));
         try{
-            BrowserUtils.waitForClickablility(calenderDate,4);
+            BrowserUtils.waitForClickablility(calenderDate,3);
             BrowserUtils.clickWithJS(calenderDate);
         }catch (TimeoutException e){
             calendarRightArrow.click();
-            BrowserUtils.waitForClickablility(calenderDate,4);
+            BrowserUtils.waitForClickablility(calenderDate,3);
             BrowserUtils.clickWithJS(calenderDate);
         }
     }

@@ -31,6 +31,17 @@ Scenario Outline: The customer should be able to display reservation details
       | BCVR237241        | Tester          | 22-Sep-22    | 28-Sep-22      |
       | AUUR261388        | Tester          | 25-Sep-22    | 26-Sep-22      |
       | AMOR227074        | Tester          | 28-Aug-22    | 29-Aug-22      |
+@negative
+Scenario Outline: The customer should not be able to  update  reservation as a recent date
+  When customer fills the "<booking reference>" "<booking surname>" "<arrival date>"
+  And customer clicks submit button
+  Then system should not be able direct user into Booking information page
+  Examples:
+    | booking reference | booking surname | arrival date |
+    | BCVR237241        | Test            | 22-Sep-22    |
+    | AUUR261388        | Test            | 25-Sep-22    |
+    | AMOR227074        | Test            | 28-Aug-22    |
+
 
 
 

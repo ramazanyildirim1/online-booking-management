@@ -17,6 +17,7 @@ public class AmendStepDefinitions {
     ManageBooking manageBookingPage = new ManageBooking();
     BookingInformationPage bookingInformationPage = new BookingInformationPage();
     AmendPage amendPage = new AmendPage();
+    public static ArrayList<String> storingAlldata= new ArrayList<>();
     @Given("customer is in the main page")
     public void customerIsInTheMainPage() {
         manageBookingPage.acceptCookies.click();
@@ -60,12 +61,25 @@ public class AmendStepDefinitions {
     }
     @And("customer should be able to review updated reservation details and store in {string} file")
     public void customerShouldBeAbleToReviewUpdatedReservationDetailsAndStoreInFile(String fileName) {
-        amendPage.storeAllDataToCSV(fileName);
+        String fromDateInfo = amendPage.fromDateInformation.getText();
+        String nightInfo = amendPage.nightInformation.getText();
+        String toDateInfo = amendPage.toDateInformation.getText();
+        String newTotalInfo = amendPage.newTotalInformation.getText();
+        String totalFeeInfo = amendPage.totalFee.getText();
+        storingAlldata.add(fromDateInfo);
+        storingAlldata.add(nightInfo);
+        storingAlldata.add(toDateInfo);
+        storingAlldata.add(newTotalInfo);
+        storingAlldata.add(totalFeeInfo);
+        BrowserUtils.writeToCSVFile(fileName,storingAlldata);
+
        String expectedRoomsAvailableHeader="Rooms available";
        Assert.assertEquals(expectedRoomsAvailableHeader,amendPage.roomsAvailable.getText());
     }
-    @And("customer should not be able to  updated reservation details as recent date")
-    public void customerShouldNotBeAbleToUpdatedReservationDetailsAsRecentDate() {
-
+    @Then("system should not be able direct user into Booking information page")
+    public void systemShouldNotBeAbleDirectUserIntoBookingInformationPage() {
+        String expectedInformation= "Some of these details are missing or invalid. Please provide correct details";
+        Assert.assertEquals(expectedInformation,manageBookingPage.incorrectDetailsInformation.getText());
     }
+
 }
